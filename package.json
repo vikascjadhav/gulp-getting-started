@@ -1,0 +1,25 @@
+{
+  "name": "gulp-getting-started",
+  "version": "1.0.0",
+  "description": "gulp getting started ",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikascjadhav/gulp-getting-started.git"
+  },
+  "keywords": [
+    "gulp",
+    "scss",
+    "uglify",
+    "minify"
+  ],
+  "author": "Vikas Jadhav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vikascjadhav/gulp-getting-started/issues"
+  },
+  "homepage": "https://github.com/vikascjadhav/gulp-getting-started#readme"
+}
