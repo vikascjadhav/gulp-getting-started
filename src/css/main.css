@@ -1,5 +1,12 @@
 
+
 body {
     background-color: aqua;
     font-size: 20px;
+    background-image: url("img/bg.jpg");
 }
+
+p {
+    color: red;
+}
+

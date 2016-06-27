@@ -11,6 +11,8 @@ var autoprefix = require('gulp-autoprefixer');
 var minifyCSS = require('gulp-minify-css');
 var minifyHTML = require('gulp-minify-html');
 var changed = require('gulp-changed');
+var imagemin = require('gulp-imagemin');
+var size     = require('gulp-size');
 // Lint Task
 gulp.task('lint', function() {
     return gulp.src('src/js/*.js')
@@ -29,6 +31,13 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('./dist/css/'));
 });
 
+gulp.task('minifyimages', function() {
+  return gulp.src(['src/css/img/*.jpg'])
+    .pipe(imagemin({ optimizationLevel: 3, progessive: true, interlaced: true}))
+    .pipe(gulp.dest('./dist/css/img'))
+    .pipe(size());
+});
+
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
     return gulp.src('src/js/*.js')
@@ -38,6 +47,7 @@ gulp.task('scripts', function() {
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
+
 
 
 // minify new or changed HTML pages
@@ -60,5 +70,5 @@ gulp.task('watch', function() {
 // Default Task
 //gulp.task('default', ['lint', 'sass', 'scripts', 'watch']);
 
-gulp.task('default', ['styles','lint', 'scripts','htmlminify','watch']);
+gulp.task('default', ['styles','lint', 'scripts','htmlminify','watch','minifyimages']);
 
