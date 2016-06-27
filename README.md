@@ -1,6 +1,6 @@
 # gulp-getting-started
 
-* Install dependencies 
+### Install dependencies 
  *  nodejs,npm and other gulp packages mentioned below using npm manager
  *	var gulp = require('gulp');
  *	var jshint = require('gulp-jshint');
@@ -19,7 +19,7 @@
 
 
 
-* create below structure :- 
+### Create below structure :- 
 
 * ├── gulpfile.js
 * ├── package.json
@@ -34,8 +34,13 @@
 *         └── app.js
 
 
+###Running Project
+* clone repository 
+* cd /project-directiry
+* run gulp command - this will create dist directory 
+* open index.html in browser and observe events in Developer tools of browser
 
-*
+
 ###SORCE DIR
 ###BUILD DIR
 
